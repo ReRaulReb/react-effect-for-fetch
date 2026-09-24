@@ -1,9 +1,13 @@
-export default function ArtListItem({src, title, artistName, pubHist}){
+import { Link } from "react-router-dom";
+
+export default function ArtListItem({src, title, artistName, pubHist, id}){
 	return(
-	      <li>
+	<li>
 		<div className="frame">
-		  <img
-		    src={src}/>
+			<Link to = {`/image/${id}`} state={`https://boolean-uk-api-server.fly.dev${src}`}>
+				<img
+				src={`https://boolean-uk-api-server.fly.dev${src}`}/>
+			</Link>
 		</div>
 		<h3>{title}</h3>
 		<p>Artist: {artistName}</p>
@@ -13,7 +17,7 @@ export default function ArtListItem({src, title, artistName, pubHist}){
 			<li key={index}>{text}</li>
 			))}
 		</ul>
-	      </li>
+	</li>
 	)
 
 }

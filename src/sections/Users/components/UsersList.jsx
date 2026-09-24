@@ -11,7 +11,8 @@ export default function UserList({userList}){
 		firstName={user.firstName}
 		lastName={user.lastName}
 		email={user.email}
-		bgColor={user.favouriteColour}/>
+		bgColor={user.favouriteColour}
+		id={user.id}/>
 		))}
 		</ul>
 	</div>

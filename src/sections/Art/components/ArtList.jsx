@@ -8,7 +8,8 @@ export default function ArtList({artList}){
 		{artList.map((art) => (
 		<ArtListItem key={art.id}
 		src = {art.imageURL} title={art.title} 
-		artistName={art.artist} pubHist={art.publicationHistory}/>
+		artistName={art.artist} pubHist={art.publicationHistory}
+		id={art.id}/>
 		))}
 		</ul>
 	</div>
